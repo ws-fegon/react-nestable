@@ -590,7 +590,7 @@ var Nestable = function (_Component) {
       var group = this.props.group;
       var dragItem = this.state.dragItem;
 
-      var el = document.querySelector('.nestable-' + group + ' .nestable-item-' + dragItem.id.replace('.', '\\.'));
+      var el = document.querySelector('.nestable-' + group + ' .nestable-item-' + dragItem.id.replace(/./g, '\\.'));
 
       var listStyles = {};
       if (el) {
